@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+</body>
+<script>
+    //Print numbers 1 to 50 using a loop.
+    function printNumbers(){
+        for (let i = 1; i <= 50; i++){
+            console.log(i);
+        }
+    }
+
+    //Print only multiples of 5 between 1 and 100.
+    function printMultiplesOfFive(){
+        for (let i = 1; i <= 100; i++){
+            if (i % 5 === 0){
+                console.log(i);
+            }
+        }
+    }
+
+    //Loop through an array and print each item with its index.
+    function printArrayItems(array){
+        for (let i = 0; i < array.length; i++){
+            console.log(`Index: ${i}, Item: ${array[i]}`);
+        }
+    }
+
+
+    printNumbers();
+    printMultiplesOfFive();
+    printArrayItems(["apple", "banana", "cherry", "date", "papaya"]);
+</script>
+</html>

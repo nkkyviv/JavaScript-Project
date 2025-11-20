@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>   
+</body>
+<script>
+    //Add a new colour to the end of an array of colours.
+    let arr = ["red", "blue", "green"];
+
+    function addColour(array, colour){
+        newArr = [];
+        newArr = array.push(colour);
+        return console.log(array);
+    }
+
+    //Remove the first colour from an array of colours.
+    function removeColour(array){
+        removedColour = array.splice(0, 1);
+        return console.log(array);
+    }
+
+    //Convert an array of numbers to their squares using .map().
+    function squareNumber(array){
+        const newArr = array.map(item => item * item);
+        console.log(newArr);
+    }
+
+    //Filter out all the odd numbers using .filter().
+    function filterOddNumbers(array){
+        const filteredArr = array.filter(item => item % 2 === 0);
+        console.log(filteredArr);
+    }
+
+    //filter users based on age greater than 18
+    const users = [
+        { name: "Vivian", age: 32 },
+        { name: "Mary", age: 17 },
+        { name: "Chuks", age: 19 },
+        { name: "David", age: 15 }
+    ];
+
+    const adults = users.filter(user => user.age > 18);
+    console.log(adults);
+
+    //Sort an array of strings alphabetically.
+    function sortStrings(array){
+        const sortedArr = array.sort();
+        console.log(sortedArr);
+    }
+    //sort out in descending alphabetical order
+    function sortStringsDesc(array){
+        const sortedArr = array.sort().reverse();
+        console.log(sortedArr);
+    }
+
+    //Sort an array of numbers in ascending & descending order.
+    function sortNumbersAsc(array){
+        const sortedArr = array.sort((a, b) => a - b); //sort uses negative here, if its negative a is less than b then a comes first
+        console.log(sortedArr);
+    }
+    function sortNumbersDesc(array){
+        const sortedArr = array.sort((a, b) => b - a); //sort uses positive here, if its positive b is greater than a then b comes first
+        console.log(sortedArr);
+    }
+
+    sortNumbersAsc([34, 7, 23, 32, 5, 62]);
+    sortNumbersDesc([34, 7, 23, 32, 5, 62]);
+    sortStringsDesc(["banana", "apple", "orange", "mango"]);
+    sortStrings(["banana", "apple", "orange", "mango"]);
+    squareNumber([1, 2, 3, 4, 5]);
+    addColour(arr, "yellow");
+    removeColour(arr);
+    filterOddNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+</script>
+</html>
